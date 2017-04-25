@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Convertidor</title>
+</head>
+<body>
+<p>Inserte temperatura en Grados Celsius</p>
+<p><input id="c" onkeyup="convertir('C')">grados Celsius</p>
+<p><input id="f" onkeyup="convertir('F')">grados Fahrenheit</p> 
+<script>
+function convertir(grados) {
+    var x;
+    if (grados == "C") {
+        x = document.getElementById("c").value * 9 / 5 + 32;
+        document.getElementById("f").value = Math.round(x);
+    } else {
+        x = (document.getElementById("f").value -32) * 5 / 9;
+        document.getElementById("c").value = Math.round(x);
+    }
+}
+</script>
+
+</body>
+</html>
